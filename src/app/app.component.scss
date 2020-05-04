@@ -1,0 +1,37 @@
+.header-container {
+    display: flex;
+    align-items: center;
+    width: auto;
+
+    .logo {
+        padding: 0 1.25rem;
+        font-size: 1.75rem;
+        white-space: nowrap;
+        text-decoration: none;
+    }
+
+}
+
+//code not working to space out the two header containers
+// nb-layout-header nav {
+// 	align-items: center;
+// 	justify-content: space-between;
+// 	display: flex;
+// }
+
+
+
+nb-action {
+    height: auto;
+    display: flex;
+    align-content: center;
+}
+
+.user-action {
+    border: none;
+    padding: 0;
+}
+
+nb-user {
+    cursor: pointer;
+}

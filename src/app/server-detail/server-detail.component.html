@@ -1,0 +1,43 @@
+<!-- <p>{{router.url.split("/")[2].split('%20').join(' ')}}</p> -->
+<nb-card size="large">
+<nb-card-header> 
+    <h2>{{Name}}</h2>
+</nb-card-header>
+<div class="summary-container">
+    <div>
+        <div>Server Type</div>
+        <div class="h6">{{ Data.server_type }}</div>
+    </div>
+    <div>
+        <div>Population</div>
+        <div class="h6">{{ Data.population }}</div>
+    </div>
+    <div>
+        <div>Timezone</div>
+        <div class="h6">{{ Data.timezone }}</div>
+    </div>
+    <div>
+        <div>Location</div>
+        <div class="h6">{{ Data.locale }}</div>
+    </div>
+</div>
+<h5>Guilds</h5>
+<nb-list>
+  <nb-list-item>
+      Guilds listed here
+  </nb-list-item>
+  <nb-list-item>
+    Guilds listed here
+  </nb-list-item>
+  <nb-list-item>
+    Guilds listed here
+  </nb-list-item>
+  
+</nb-list>
+
+
+<nb-card-footer>
+    Don't See Your Guild? <a routerLink='/add' nbButton>Add it to the list</a>
+</nb-card-footer>
+
+</nb-card>

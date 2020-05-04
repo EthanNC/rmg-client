@@ -1,0 +1,60 @@
+
+<nb-card>
+    <nb-card-body>
+    <nb-stepper #stepper>
+        <nb-step [stepControl]="firstForm" label="Find Your Server">
+        <form [formGroup]="firstForm" (ngSubmit)="onFirstSubmit()" class="step-container">
+            <p class="lorem">
+            What server do you play on?
+            </p>
+            <div class="input-group">
+            <input nbInput type="text" placeholder="Enter your server" class="form-control" formControlName="firstCtrl"
+                    [ngClass]="{'form-control-danger': firstForm.invalid && (firstForm.dirty || firstForm.touched)}">
+            </div>
+            <button nbButton nbStepperNext>next</button>
+        </form>
+        </nb-step>
+        <nb-step [stepControl]="secondForm" label="Add Your Guild">
+        <form [formGroup]="secondForm" (ngSubmit)="onSecondSubmit()" class="step-container">
+            <p class="lorem">
+             Tell us about your guild
+            </p>
+            <div class="input-group">
+            <input type="text" placeholder="Guild Name" class="form-control" formControlName="secondCtrl"
+                [ngClass]="{'form-control-danger': secondForm.invalid && (secondForm.dirty || secondForm.touched)}">
+            <br/>
+            <input type="text" placeholder="Guild Master" class="form-control" formControlName="secondCtrl"
+                [ngClass]="{'form-control-danger': secondForm.invalid && (secondForm.dirty || secondForm.touched)}">
+            <br/>
+                    <nb-radio-group >
+                        <nb-radio value="1">Alliance</nb-radio>
+                        <nb-radio value="2">Horde</nb-radio>
+                      </nb-radio-group>
+            </div>
+            
+            <button nbButton nbStepperPrevious>prev</button>
+            <button nbButton nbStepperNext>next</button>
+        </form>
+        </nb-step>
+        <nb-step [stepControl]="thirdForm" label="Rate Your Guild">
+        <form [formGroup]="thirdForm" (ngSubmit)="onThirdSubmit()" class="step-container">
+            <p class="lorem">
+            Rate Your Guild
+            </p>
+            <div class="input-group">
+            <input type="text" placeholder="Enter something" class="form-control" formControlName="thirdCtrl"
+                    [ngClass]="{'form-control-danger': thirdForm.invalid && (thirdForm.dirty || thirdForm.touched)}">
+            </div>
+            <button nbButton nbStepperPrevious>prev</button>
+            <button nbButton nbStepperNext>Confirm</button>
+        </form>
+        </nb-step>
+        <nb-step [stepControl]="thirdForm" [hidden]="true" label="Third step">
+        <div class="step-container">
+            <h3>Your guild has been added</h3>
+            <button nbButton (click)="stepper.reset()">Go to Guild page</button>
+        </div>
+        </nb-step>
+    </nb-stepper>
+    </nb-card-body>
+</nb-card>

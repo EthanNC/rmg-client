@@ -1,0 +1,17 @@
+.summary-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #252547;
+    justify-content: space-between;
+    padding: 1.5rem 4rem 1rem;
+    border: 1px solid nb-theme(border-basic-color-3);
+    border-left: none;
+    border-right: none;
+}
+
+h2{
+    text-align: center;
+}
+h5{
+    text-align: center;
+}

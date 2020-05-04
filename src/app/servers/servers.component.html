@@ -1,0 +1,34 @@
+
+<nb-card size="large">
+    <nb-tabset fullWidth>
+        <nb-tab tabTitle="Americas">
+            <nb-list>
+                <nb-list-item *ngFor="let servers of naServers">
+                    <a routerLink="/servers/{{servers.name}}" >
+                    <b>
+                    {{servers.name}}
+                    </b>
+                    </a>
+                </nb-list-item>
+            </nb-list>
+        </nb-tab>
+        <nb-tab tabTitle="Europe">
+            <nb-list>
+                <nb-list-item *ngFor="let servers of euServers">
+                    <a routerLink="/servers/{{servers.name}}" >
+                    <b>
+                    {{servers.name}}
+                    </b>
+                    </a>
+                </nb-list-item>
+            </nb-list>
+        </nb-tab>
+    </nb-tabset>
+    </nb-card>
+
+
+    
+
+  
+
+
